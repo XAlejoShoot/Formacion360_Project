@@ -1,0 +1,202 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+}
+
+/* Login Screen */
+.login-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #f0f0f0;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-label {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #e0e0e0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.85rem 1.25rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.15);
+  color: #f0f0f0;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #d0d0d0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 10px #9b59b6;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.btn-login {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 0.85rem 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  box-shadow: 0 4px 15px rgba(101, 41, 255, 0.4);
+}
+
+.btn-login:hover,
+.btn-login:focus {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  outline: none;
+  box-shadow: 0 6px 20px rgba(101, 41, 255, 0.7);
+}
+
+/* Dashboard Screen */
+.dashboard-header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 1.25rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 15px rgba(101, 41, 255, 0.5);
+  border-radius: 0 0 20px 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-logout {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.btn-logout:hover,
+.btn-logout:focus {
+  background: white;
+  color: #6a11cb;
+  outline: none;
+  box-shadow: 0 0 20px #6a11cb;
+}
+
+.dashboard-main {
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.dashboard-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 960px;
+}
+
+.dashboard-box {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.dashboard-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(101, 41, 255, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 2rem 2rem;
+    max-width: 100%;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .dashboard-section {
+    grid-template-columns: 1fr;
+  }
+}
