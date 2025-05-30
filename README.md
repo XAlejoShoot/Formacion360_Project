@@ -1,4 +1,4 @@
-# Formación360 - Prototipo Frontend de Baja Fidelidad
+# Formación360 - Prototipo Frontend
 
 Este proyecto es un prototipo frontend de baja fidelidad para el Sistema de Gestión de Aprendizaje Formación360. Incluye pantallas estáticas básicas para visualizar elementos clave de la interfaz y el flujo de navegación.
 

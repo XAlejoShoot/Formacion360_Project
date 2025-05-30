@@ -13,11 +13,45 @@
     </header>
     <main class="dashboard-main">
         <section class="dashboard-section">
-            <div class="dashboard-box">Mis Cursos</div>
+            <a href="cursos.html" class="dashboard-box" id="mis-cursos" role="button" tabindex="0">Mis Cursos</a>
             <div class="dashboard-box">Mi Progreso</div>
-            <div class="dashboard-box">Ayuda (Chatbot)</div>
+            <div class="dashboard-box" id="chatbot">Ayuda (Chatbot)</div>
             <div class="dashboard-box">Configuración</div>
         </section>
     </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <p id="modal-message"></p>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.getElementById('modal');
+      const modalMessage = document.getElementById('modal-message');
+      const modalClose = document.getElementById('modal-close');
+
+      document.getElementById('mis-cursos').addEventListener('click', () => {
+        modalMessage.textContent = 'La sección "Mis Cursos" está en construcción.';
+        modal.style.display = 'block';
+      });
+
+      document.getElementById('chatbot').addEventListener('click', () => {
+        modalMessage.textContent = 'El Chatbot no está disponible en esta versión.';
+        modal.style.display = 'block';
+      });
+
+      modalClose.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+
+      window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    </script>
 </body>
 </html>

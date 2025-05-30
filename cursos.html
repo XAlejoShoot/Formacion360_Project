@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formación360 - Mis Cursos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Mis Cursos</h1>
+    <a href="dashboard.html" class="btn-logout" aria-label="Volver al Dashboard">Volver</a>
+  </header>
+  <main class="cursos-main">
+    <section class="cursos-section">
+      <div class="curso-box">
+        <div class="video-thumbnail" aria-label="Curso 1: Introducción"></div>
+        <h2>Curso 1: Introducción</h2>
+      </div>
+      <div class="curso-box">
+        <div class="video-thumbnail" aria-label="Curso 2: Avanzado"></div>
+        <h2>Curso 2: Avanzado</h2>
+      </div>
+      <div class="curso-box">
+        <div class="video-thumbnail" aria-label="Curso 3: Especialización"></div>
+        <h2>Curso 3: Especialización</h2>
+      </div>
+      <div class="curso-box">
+        <div class="video-thumbnail" aria-label="Curso 4: Proyecto Final"></div>
+        <h2>Curso 4: Proyecto Final</h2>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .video-thumbnail {
+      width: 100%;
+      height: 140px;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(30, 60, 114, 0.6);
+      margin-bottom: 0.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-thumbnail::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.8);
+      clip-path: polygon(25% 20%, 75% 50%, 25% 80%);
+      transform: translate(-50%, -50%);
+      transition: background 0.3s ease;
+    }
+
+    .video-thumbnail:hover::before {
+      background: rgba(255, 255, 255, 1);
+      cursor: pointer;
+    }
+  </style>
+</body>
+</html>
